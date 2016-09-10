@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA2D9717-3D23-4780-9436-BDEEDE8E4691}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Calculator</RootNamespace>
+    <AssemblyName>Calculator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ComponentAttribute.cs" />
+    <Compile Include="Attributes\ConvertorComponentAttribute.cs" />
+    <Compile Include="Attributes\CoreAttribute.cs" />
+    <Compile Include="Attributes\InjectAttribute.cs" />
+    <Compile Include="Core\CalculationHandler.cs" />
+    <Compile Include="Core\DependencyContainer.cs" />
+    <Compile Include="Core\MethodInvoker.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\AddOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\BitwiseAndOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\BitwiseLeftShiftOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\BitwiseOrOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\BitwiseRightShiftOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\BitwiseRotationLeftOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\BitwiseRotationRightOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\BitwiseXorOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\DivideOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\ModOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\MultiplyOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\BinaryStrategies\SubtractOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\UnaryStrategies\BitwiseNotOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\UnaryStrategies\DecrementOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\UnaryStrategies\IncrementOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedByteStrategies\UnaryStrategies\NegativeValueOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\AddOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\BitwiseAndOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\BitwiseLeftShiftOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\BitwiseOrOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\BitwiseRightShiftOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\BitwiseRotationLeftOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\BitwiseRotationRightOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\BitwiseXorOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\DivideOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\ModOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\MultiplyOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\BinaryStrategies\SubtractOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\UnaryStrategies\BitwiseNotOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\UnaryStrategies\DecrementOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\UnaryStrategies\IncrementOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt16Strategies\UnaryStrategies\NegativeValueOperationSignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\AddOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\BitwiseAndOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\BitwiseRotationLeftOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\BitwiseRotationRightOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\DivideOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\ModOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\MultiplyOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\BitwiseLeftShiftOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\BitwiseRightShiftOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\UnaryStrategies\BitwiseNotOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\BitwiseOrOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\SubtractOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\BinaryStrategies\BitwiseXorOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\UnaryStrategies\DecrementOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\UnaryStrategies\IncrementOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt32Strategies\UnaryStrategies\NegativeValueOperationSignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\BitwiseAndOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\BitwiseLeftShiftOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\BitwiseOrOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\BitwiseRightShiftOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\BitwiseRotationLeftOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\BitwiseRotationRightOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\BitwiseXorOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\DivideOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\ModOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\MultiplyOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\SubtractOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\UnaryStrategies\BitwiseNotOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\UnaryStrategies\DecrementOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\UnaryStrategies\IncrementOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\SignedInt64Strategies\UnaryStrategies\NegativeValueOperationSignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\AddOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\BitwiseAndOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\BitwiseLeftShiftOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\BitwiseOrOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\BitwiseRightShiftOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\BitwiseRotationLeftOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\BitwiseRotationRightOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\BitwiseXorOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\DivideOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\ModOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\MultiplyOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\BinaryStrategies\SubtractOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\UnaryStrategies\BitwiseNotOperationUnsignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\UnaryStrategies\DecrementOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\UnaryStrategies\IncrementOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedByteStrategies\UnaryStrategies\NegativeValueOperationSignedByteStrategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\AddOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\BitwiseAndOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\BitwiseLeftShiftOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\BitwiseOrOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\BitwiseRightShiftOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\BitwiseRotationLeftOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\BitwiseRotationRightOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\BitwiseXorOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\DivideOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\ModOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\MultiplyOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\BinaryStrategies\SubtractOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\UnaryStrategies\BitwiseNotOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\UnaryStrategies\DecrementOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\UnaryStrategies\IncrementOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt16Strategies\UnaryStrategies\NegativeValueOperationUnsignedInt16Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\AddOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\BitwiseAndOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\BitwiseLeftShiftOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\BitwiseOrOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\BitwiseRightShiftOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\BitwiseRotationLeftOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\BitwiseRotationRightOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\BitwiseXorOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\DivideOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\ModOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\MultiplyOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\BinaryStrategies\SubtractOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\UnaryStrategies\BitwiseNotOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\UnaryStrategies\DecrementOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\UnaryStrategies\IncrementOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt32Strategies\UnaryStrategies\NegativeValueOperationUnsignedInt32Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\AddOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\BitwiseAndOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\BitwiseLeftShiftOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\BitwiseOrOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\BitwiseRightShiftOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\BitwiseRotationLeftOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\BitwiseRotationRightOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\BitwiseXorOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\DivideOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\ModOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\MultiplyOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\BinaryStrategies\SubtractOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\UnaryStrategies\BitwiseNotOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\UnaryStrategies\DecrementOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\UnaryStrategies\IncrementOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\Strategies\UnsignedInt64Strategies\UnaryStrategies\NegativeValueOperationUnsignedInt64Strategy.cs" />
+    <Compile Include="Core\TypeProvider.cs" />
+    <Compile Include="Core\ValueExtractor.cs" />
+    <Compile Include="Events\ChangeNumericTypeEventArgs.cs" />
+    <Compile Include="Events\ChangeTextEventHandler.cs" />
+    <Compile Include="Events\ChangeTextEventArgs.cs" />
+    <Compile Include="Exceptions\InvalidInputException.cs" />
+    <Compile Include="Exceptions\InvalidKeyPressedException.cs" />
+    <Compile Include="Exceptions\MissingConstructorException.cs" />
+    <Compile Include="Exceptions\NonExistantTypeException.cs" />
+    <Compile Include="Exceptions\UnimplementedOperationException.cs" />
+    <Compile Include="Exceptions\UnimplementedTypeException.cs" />
+    <Compile Include="Exceptions\UnmappableTypeException.cs" />
+    <Compile Include="Exceptions\ZeroDivisionException.cs" />
+    <Compile Include="Interfaces\ICalculationHandler.cs" />
+    <Compile Include="Interfaces\IDependencyContainer.cs" />
+    <Compile Include="Interfaces\IMethodInvoker.cs" />
+    <Compile Include="Interfaces\ITypeProvider.cs" />
+    <Compile Include="Core\Convertors\BaseConvertor.cs" />
+    <Compile Include="Core\Convertors\BinBaseConvertor.cs" />
+    <Compile Include="Core\Convertors\DecimalBaseConvertor.cs" />
+    <Compile Include="Core\Convertors\HexBaseConvertor.cs" />
+    <Compile Include="Core\Convertors\OctBaseConvertor.cs" />
+    <Compile Include="Core\CalculationExecutor.cs" />
+    <Compile Include="Core\OperationsContainer.cs" />
+    <Compile Include="Data\RepositoryHandler.cs" />
+    <Compile Include="Data\CalculationRepository.cs" />
+    <Compile Include="Exceptions\NumericTypeLowerBoundOverflowException.cs" />
+    <Compile Include="Exceptions\NumericTypeUpperBoundOverflowException.cs" />
+    <Compile Include="Forms\BinaryCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BinaryCalculator.Designer.cs">
+      <DependentUpon>BinaryCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethods\MenuActions.cs" />
+    <Compile Include="Forms\ControlsHandler.cs" />
+    <Compile Include="Interfaces\IBaseConvertor.cs" />
+    <Compile Include="Interfaces\IRepositoryHandler.cs" />
+    <Compile Include="Interfaces\ICalculationRepository.cs" />
+    <Compile Include="Interfaces\ICalculationExecutor.cs" />
+    <Compile Include="Interfaces\IOperationsContainer.cs" />
+    <Compile Include="CalculatorLauncher.cs" />
+    <Compile Include="Interfaces\IValueExtractor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomControls\TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\TransparentLabel.Designer.cs">
+      <DependentUpon>TransparentLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Strategies\SignedInt64Strategies\BinaryStrategies\AddOperationSignedInt64Strategy.cs" />
+    <Compile Include="Utilities\Constants.cs" />
+    <Compile Include="Utilities\ExceptionConstants.cs" />
+    <Compile Include="Utilities\FormConstants.cs" />
+    <Compile Include="Utilities\NameGenerator.cs" />
+    <Compile Include="Utilities\TypeGenerator.cs" />
+    <EmbeddedResource Include="Forms\BinaryCalculator.resx">
+      <DependentUpon>BinaryCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="CustomControls\TransparentLabel.resx">
+      <DependentUpon>TransparentLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calculator.csproj.DotSettings.user" />
+    <Content Include="Resources\calc.ico" />
+    <Content Include="Resources\calculator.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
